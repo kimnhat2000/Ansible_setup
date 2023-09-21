@@ -1,0 +1,5 @@
+- hosts: all
+  tasks:
+  - name: "Greeting file from Ubuntu to Centos"
+    shell: |
+        echo 'hello Censtos it is Ubuntu saying Hello' > /root/fromControlNode.txt
