@@ -17,36 +17,36 @@ RUN /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/instal
 # Add Homebrew to the PATH
 ENV PATH="/home/linuxbrew/.linuxbrew/bin:${PATH}"
 
-# Create the "nhat" user
-RUN useradd -m -s /bin/bash nhat
+# Create the "Integrations" user
+RUN useradd -m -s /bin/bash Integrations
 
-# Set the password for the "nhat" user (change as needed)
-RUN echo 'nhat:0408' | chpasswd
+# Set the password for the "Integrations" user (change as needed)
+RUN echo 'Integrations:1234' | chpasswd
 
-# Generate an SSH key for the "nhat" user
-RUN mkdir -p /home/nhat/.ssh && \
-    ssh-keygen -t rsa -f /home/nhat/.ssh/id_rsa -N ""
+# Generate an SSH key for the "Integrations" user
+RUN mkdir -p /home/Integrations/.ssh && \
+    ssh-keygen -t rsa -f /home/Integrations/.ssh/id_rsa -N ""
 
-# Set correct permissions for the "nhat" home directory
-RUN chown -R nhat:nhat /home/nhat
+# Set correct permissions for the "Integrations" home directory
+RUN chown -R Integrations:Integrations /home/Integrations
 
 # Configure SSH to allow password and key-based authentication
 RUN sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config && \
     sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin no/' /etc/ssh/sshd_config && \
-    echo 'AllowUsers nhat' >> /etc/ssh/sshd_config
+    echo 'AllowUsers Integrations' >> /etc/ssh/sshd_config
 
-# Add the "nhat" user to the sudo group
-RUN usermod -aG sudo nhat
+# Add the "Integrations" user to the sudo group
+RUN usermod -aG sudo Integrations
 
-# Allow the "nhat" user to run commands with sudo without a password prompt
-RUN echo "nhat ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers.d/nhat
+# Allow the "Integrations" user to run commands with sudo without a password prompt
+RUN echo "Integrations ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers.d/Integrations
 
 # Optional tool to make terminals look more pleasant
-# Install oh-my-posh (as the "nhat" user)
+# Install oh-my-posh (as the "Integrations" user)
 RUN brew install jandedobbeleer/oh-my-posh/oh-my-posh 
 
-# Add command to ~/.bashrc (for the "nhat" user)
-RUN echo 'eval "$(oh-my-posh init bash --config /mytheme.json)"' >> /home/nhat/.bashrc
+# Add command to ~/.bashrc (for the "Integrations" user)
+RUN echo 'eval "$(oh-my-posh init bash --config /mytheme.json)"' >> /home/Integrations/.bashrc
 
 # Switch back to the root user
 USER root
@@ -70,7 +70,7 @@ RUN mkdir -p /run/sshd
 COPY mytheme.json /
 
 # Copy ansible cfg file
-COPY .ansible.cfg /home/nhat/
+COPY .ansible.cfg /home/Integrations/
 
 # Start SSH server as a service
 CMD ["/usr/sbin/sshd", "-D"]

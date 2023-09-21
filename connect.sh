@@ -7,10 +7,10 @@ servers=("server01" "server02" "server03")
 username="root"
 
 # Define the password
-password="0408"
+password="1234"
 
 # Define the path to the SSH identity file
-identity_file="/home/nhat/.ssh/id_rsa.pub"
+identity_file="/home/Integrations/.ssh/id_rsa.pub"
 
 # Loop through the list of servers and run ssh-copy-id with sshpass
 for server in "${servers[@]}"; do
