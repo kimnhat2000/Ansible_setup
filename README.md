@@ -19,14 +19,14 @@ I have every necessary tools including `op`, `git`, `sudo`, `curl` etc installed
     bash connect.sh
 
 ### List all alvailable hosts in ansible
-ansible all --list-hosts
+    ansible all --list-hosts
 
 ### Run test playbook
-ansible-playbook -i hosts testfile.yml
+    ansible-playbook -i hosts testfile.yml
 
 ### A new fromControlNode.txt should be created for all hosts in our ansible network. We can test by ssh to them
-ssh root@server01    
-ls   
-cat fromControlNode.txt   
+    ssh root@server01    
+    ls   
+    cat fromControlNode.txt   
 
 
