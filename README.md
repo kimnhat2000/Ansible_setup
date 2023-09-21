@@ -1,4 +1,4 @@
-I have every necessary tools including `op`, `git`, `suo`, `curld` etc installed for control node to run ansible network. We can use it to test ssh agent, `op` and ansible 1Password modules
+I have every necessary tools including `op`, `git`, `sudo`, `curl` etc installed for control node to run ansible network. We can use it to test ssh agent, `op` and ansible 1Password modules
 
 # STEPS TO DEPLOY ANSIBLE NETWOR
 
@@ -25,7 +25,7 @@ ansible all --list-hosts
 ansible-playbook -i hosts testfile.yml
 
 ### A new fromControlNode.txt should be created for all hosts in our ansible network. We can test by ssh to them
-ssh root@server01
-ls 
+ssh root@server01 /n
+ls /n
 cat fromControlNode.txt
 
