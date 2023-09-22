@@ -1,17 +1,17 @@
 - hosts: ubuntu
   tasks:
-    - name: Load sensitive data
+    - name: load secrets
       include_vars:
         file: secrets.yml
         name: var
-      no_log: true  # set to true to prevent displaying sensitive data in logs
+      no_log: false
 
     - name: Run a vault ls request
       shell: |
         curl -X GET http://host.docker.internal:8080/v1/vaults \
           --header 'Authorization: Bearer {{var.connect_token}}' \
           --header 'Content-type: application/json'
-      register: vault_output  # capture the output of the command
+      register: vault_output
 
     - name: Write output to a file
       copy:
