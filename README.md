@@ -1,4 +1,4 @@
-I have every necessary tools including `op`, `git`, `sudo`, `curl`, `openssh-server`, `openssh-client`, `net-tools`, `gnupg2`, `ansible`, `sshpass` installed for control node so it can be useful for different tasks and tests besides running ansible network.
+I have every necessary tools including `op`, `git`, `sudo`, `curl`, `openssh-server`, `openssh-client`, `net-tools`, `gnupg2`, `ansible`, `sshpass`, `nano` installed for control node so it can be useful for different tasks and tests besides running ansible network.
 
 [Link to my repo](https://github.com/kimnhat2000/Ansible_setup/tree/integrations)
 
@@ -19,7 +19,7 @@ I have every necessary tools including `op`, `git`, `sudo`, `curl`, `openssh-ser
 ### Connect to Control Node
     docker exec -it --user Integrations ubuntu /bin/bash
 
-### Run script to connect to servers in network
+### (Optional) Run script to connect to servers in network. Docker-compose file will run it by default
     bash connect.sh
 
 ### List all alvailable hosts in ansible
@@ -39,5 +39,10 @@ ansible-vault create secret.yml
     ssh root@server01    
     ls   
     cat fromControlNode.txt   
+
+### We can make a request to local connect server 
+    curl -X GET http://host.docker.internal:8080/v1/vaults \
+        --header 'Authorization: Bearer <token>' \
+        --header 'Content-type: application/json'
 
 

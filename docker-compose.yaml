@@ -7,15 +7,17 @@ services:
     working_dir: "/var/data"
     volumes:
       - .:/var/data
-    # entrypoint: ./connectToServers.sh
+
   server01:
     container_name: server01
     build: ./servers
     tty: true
+
   server02:
     container_name: server02
     build: ./servers
     tty: true
+
   server03:
     container_name: server03
     build: ./servers
