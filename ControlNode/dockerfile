@@ -8,7 +8,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && \
     apt-get install -y software-properties-common curl git build-essential && \
     apt-add-repository --yes --update ppa:ansible/ansible && \
-    apt-get install -y openssh-server openssh-client net-tools gnupg2 ansible sshpass sudo && \
+    apt-get install -y openssh-server openssh-client net-tools gnupg2 ansible sshpass sudo nano && \
     apt-get clean
 
 # Install Homebrew

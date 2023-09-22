@@ -2,3 +2,7 @@
 root@server01
 root@server02
 root@server03
+
+[ubuntu]
+localhost ansible_connection=local
+

@@ -14,7 +14,7 @@ I have every necessary tools including `op`, `git`, `sudo`, `curl`, `openssh-ser
     docker-compose build 
 
 ### Only run this after making a change to project folder
-    docker-compose up --force-recreate
+    docker-compose up --force-recreate -d
 
 ### Connect to Control Node
     docker exec -it --user Integrations ubuntu /bin/bash
@@ -27,6 +27,13 @@ I have every necessary tools including `op`, `git`, `sudo`, `curl`, `openssh-ser
 
 ### Run test playbook
     ansible-playbook -i hosts testfile.yml
+
+### To run a playbook on a specific host in an inventory 
+    ansible-playbook -i hosts -l <host> playbook.yml
+
+# Ansible vault
+## Create a env file to store secret
+ansible-vault create secret.yml
 
 ### A new fromControlNode.txt should be created for all hosts in our ansible network. We can test by ssh to them
     ssh root@server01    

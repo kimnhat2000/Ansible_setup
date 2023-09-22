@@ -1,0 +1,19 @@
+---
+- hosts: ubuntu
+  tasks:
+    - name: Load sensitive data
+      include_vars:
+        file: secrets.yml
+        name: var
+      no_log: false  # Prevents displaying sensitive data in logs
+
+    - name: Greeting file from Ubuntu to CentOS
+      shell: |
+        address="{{ var.my_address }}"
+        email="{{ var.my_email }}"
+        secretKey="{{ var.my_secret_key }}"
+        password="{{ var.my_password }}"
+
+        eval $(echo "$password" | op account add --address $address --email $email --secret-key $secretKey --signin)
+
+        op vault ls > ls.txt
