@@ -1,4 +1,4 @@
-- hosts: all
+- hosts: remote
   tasks:
   - name: "Greeting file from Ubuntu to Centos"
     shell: |

@@ -26,7 +26,7 @@ I have every necessary tools including `op`, `git`, `sudo`, `curl`, `openssh-ser
     ansible all --list-hosts
 
 ### Run test playbook
-    ansible-playbook -i hosts testfile.yml
+    ansible-playbook testfile.yml
 
 ### To run a playbook on a specific host in an inventory 
     ansible-playbook -i hosts -l <host> playbook.yml
