@@ -13,7 +13,7 @@
         secretKey="{{ var.my_secret_key }}"
         password="{{ var.my_password }}"
         eval $(echo "$password" | op account add --address $address --email $email --secret-key $secretKey --signin)
-        op vault ls > ls.txt
+        op vault ls > /var/data/ls.txt
 
 - hosts: remote 
   tasks:
