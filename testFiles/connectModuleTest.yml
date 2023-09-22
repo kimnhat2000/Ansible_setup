@@ -1,0 +1,32 @@
+---
+- hosts: ubuntu
+  environment:
+    OP_CONNECT_HOST: http://host.docker.internal:8080
+  collections:
+    - onepassword.connect
+  tasks:
+    - name: Load connect_token from file
+      include_vars:
+        file: secrets.yml
+        name: connect_token
+    - onepassword.connect.generic_item:
+        token: "{{ connect_token.connect_token }}"
+        vault_id: "vznh73vmml3xake4byghvbydda"
+        title: ITEM CREATED WITH ANSIBLE 2
+        state: present
+        fields:
+          - label: Codeword
+            value: "hunter2"
+            section: "Personal Info"
+            field_type: concealed
+          - label: Random Code
+            generate_value: on_create
+            generator_recipe:
+                length: 16
+                include_letters: yes
+                include_digits: yes
+                include_symbols: no
+      no_log: true
+      register: op_item
+
+    
