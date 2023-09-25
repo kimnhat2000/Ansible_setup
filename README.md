@@ -4,10 +4,10 @@ I have every necessary tools including `op`, `git`, `sudo`, `curl`, `openssh-ser
 
 # STEPS TO DEPLOY ANSIBLE NETWOR
 
-### Clone project from my repo
+### 1. Clone project from my repo
     git clone -b integrations git@github.com:kimnhat2000/Ansible_setup.git
 
-### cd to Ansible_setup and run
+### 2. cd to Ansible_setup and run
     docker-compose up -d
 
 ### Only run this after making a change to dockerfile 
@@ -16,20 +16,20 @@ I have every necessary tools including `op`, `git`, `sudo`, `curl`, `openssh-ser
 ### Only run this after making a change to project folder
     docker-compose up --force-recreate -d
 
-### Connect to Control Node
+### 3. Connect to Control Node
     docker exec -it --user Integrations ubuntu /bin/bash
 
-### (Optional) Run script to connect to servers in network. Docker-compose file will run it by default
+### 4. Run script to connect to servers in network. 
     bash connect.sh
 
 ### List all alvailable hosts in ansible
     ansible all --list-hosts
 
-# Ansible vault
+# For keeping secrets use Ansible vault
 ## Create a env file to store secret
 ansible-vault create secret.yml
 
-### Run test playbook
+### 5. Run test playbook
     ansible-playbook testfile.yml
 
 ### To run a playbook on a specific host in an inventory 
