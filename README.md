@@ -25,15 +25,15 @@ I have every necessary tools including `op`, `git`, `sudo`, `curl`, `openssh-ser
 ### List all alvailable hosts in ansible
     ansible all --list-hosts
 
+# Ansible vault
+## Create a env file to store secret
+ansible-vault create secret.yml
+
 ### Run test playbook
     ansible-playbook testfile.yml
 
 ### To run a playbook on a specific host in an inventory 
     ansible-playbook -i hosts -l <host> playbook.yml
-
-# Ansible vault
-## Create a env file to store secret
-ansible-vault create secret.yml
 
 ### A new fromControlNode.txt should be created for all hosts in our ansible network. We can test by ssh to them
     ssh root@server01    
@@ -44,5 +44,9 @@ ansible-vault create secret.yml
     curl -X GET http://host.docker.internal:8080/v1/vaults \
         --header 'Authorization: Bearer <token>' \
         --header 'Content-type: application/json'
+
+### Install onepassword.connect to run connect with ansible module
+    ansible-galaxy collection install onepassword.connect
+
 
 
