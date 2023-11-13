@@ -1,0 +1,620 @@
+test nhat.nguyen+testCLIprovisioning@agilebits.com
+
+ TestCustomTemplate --title 'this is an item from custom template' --vault 'vznh73vmml3xake4byghvbydda' --title 'test password from python'
+
+testing_2 vault
+vznh73vmml3xake4byghvbydda
+
+test bs item
+zy362ecgocf7et4n422r27mkzm
+
+op item create --category PASSWORD --generate-password --vault vznh73vmml3xake4byghvbydda --title "create password iterm from cli"
+
+op://Connect server/credentials/add more/access token
+
+op run -- terraform plan -var test="$OP_CONNECT_TOKEN"
+op run -- terraform plan -var test="123"
+export TEST="123"
+terraform plan -var TEST=$TEST
+
+terraform apply -var super_secret_variable=$super_
+
+op run -- terraform plan -var test=$TOKEN
+export TF_VAR_test="123"
+export TF_VAR_result=$(op read "$secret")
+terraform plan -var test=$result
+
+vznh73vmml3xake4byghvbydda
+
+zy362ecgocf7et4n422r27mkzm
+
+op://testing_2/test bs item/username
+
+export secret="op://testing_2/test bs item/username"
+export test=$(op read "$secret")
+
+terraform plan -var test=$test
+op run --no-masking -- terraform plan -var test=$test
+
+
+$env:secret="op://testing_2/test bs item/username"
+$env:test=$(op read "$env:secret")
+
+terraform plan -var test=$env:test
+
+op run --no-masking -- terraform plan -var test=$env:test
+
+zy362ecgocf7et4n422r27mkzm
+
+op://testing_2/bs test item/username
+
+echo "db_password: "op://testing_2/bs test item/username"" | op inject "op://testing_2/bs test item/username"
+
+op inject -i test2.txt -o config.yml && cat config.yml
+db_password: fX6nWkhANeyGE27SQGhYQ
+
+cat test2.txt | op inject
+
+for ($i = 1; $i -le 10; $i++) {
+    Write-Host $i
+}
+op item create --category login --title "Hpassword" --vault vznh73vmml3xake4byghvbydda --generate-password='letters,digits,symbols,32'
+
+for ($i = 1; $i -le 10; $i++) {
+    op item create --category login --title "password $i" --vault vznh73vmml3xake4byghvbydda --generate-password='letters,digits,symbols,32'
+}
+
+op vault list --format json | jq '.[] .id' | %{$_ -replace '"',''} > list.txt
+
+Get-Content list.txt | ForEach-Object {
+  op vault user list $_ > users.txt
+}
+Remove-Item list.txt
+
+op account add --address my.b5test.com --email nhat.nguyen+newemail@agilebits.com --signin
+
+doctl auth init --context do-sfo3-nhat-connect --access-token eyJhbGciOiJFUzI1NiIsImtpZCI6Im1uNWhyYm16aGM2bmYzNnRsaGVzbzVldjZ1IiwidHlwIjoiSldUIn0.eyIxcGFzc3dvcmQuY29tL2F1dWlkIjoiRFpOUldGSkVSUkRPTEJLNVlaQUtCVlRJTFUiLCIxcGFzc3dvcmQuY29tL3Rva2VuIjoieTNZaWZ0UjRQZGFhb1Z3YVUwM1kxeGtpUTE0ejdBZlkiLCIxcGFzc3dvcmQuY29tL2Z0cyI6WyJ2YXVsdGFjY2VzcyJdLCIxcGFzc3dvcmQuY29tL3Z0cyI6W3sidSI6InYycW1iYTVlamxicWt6bmxlcHo3bmxsajRlIiwiYSI6NDk2fSx7InUiOiJ2em5oNzN2bW1sM3hha2U0YnlnaHZieWRkYSIsImEiOjQ5Nn1dLCJhdWQiOlsiY29tLjFwYXNzd29yZC5jb25uZWN0Il0sInN1YiI6Ik02Uk5SVDZPNFpCR0hQSjY3N04zUlRIUlNVIiwiaWF0IjoxNjY5MDUxMjI5LCJpc3MiOiJjb20uMXBhc3N3b3JkLmI1IiwianRpIjoiMjdvYXJsZTdpd293ZGw2YWlzNGprbGRycWkifQ.cCyHH4V2SkCdoiQYHIu-oMmypNlfzH5vqa7TyMZXYiN7A8VLowh17Jdfo5H-fVEK4mHuXp7Ud3nSWF90sIgCTw
+
+--context do-sfo3-nhat-connect
+
+doctl compute droplet list --context do-sfo3-nhat-connect
+
+vznh73vmml3xake4byghvbydda
+
+zy362ecgocf7et4n422r27mkzm
+
+op run --no-masking -- printenv SECRET
+
+"op://testing_2/bs test item/password"
+
+$env:SECRET = "op://testing_2/bs test item/password"
+export SECRET="op://testing_2/bs test item/password"
+
+mp75x3wl3kl4ibsjtd3b74x2wy
+
+$items = Get-Content -Path "test2.txt"
+$emails = Get-Content -Path "test3.txt"
+
+for ($i = 0; $i -lt $items.Count; $i++) {
+    $item = $items[$i]
+    $email = $emails[$i]
+    $user = echo "user: $email" >> links.txt
+    $command = "op item share $item --emails $email"
+    Invoke-Expression $command >> links.txt
+}
+
+$user = echo $email >> links.txt
+$command = user: $user link: "op item share `"$item`" --emails `"$email`""
+Invoke-Expression $command >> links.txt
+
+$email = Get-Content -Path "file2.txt" -TotalCount 1
+$item = Get-Content -Path "file1.txt" -TotalCount 1
+
+$user = $email | Out-File -FilePath "links.txt" -Append -NoNewline
+$command = "user: $user link: op item share `"$item`" --emails `"$email`""
+$command | Out-File -FilePath "links.txt" -Append -NoNewline
+
+Invoke-Expression $command
+| %{$_ -replace '"',''}
+op item list --vault mp75x3wl3kl4ibsjtd3b74x2wy --format json | jq '.[] .id' | %{$_ -replace '"',''} > test2.txt
+
+op group user list ozgqwwwp7emcssfxomlhdt666y --format json | jq '.[] .email' | %{$_ -replace '"',''} > test3.txt
+
+for line in list.txt; do op group list --user $line --format=json; done
+
+$lines = Get-Content -Path "list.txt"
+foreach ($line in $lines) {
+    op group list --user $line --format=json
+}
+
+$opUsers=$(op user list --format=json | jq -r '.[].email')
+
+while read line in $opUsers; do 
+    op group list --user $line --format=json; 
+done
+
+op group user grant --group ozgqwwwp7emcssfxomlhdt666y --user ETSKZD6MAJENPIZD62QERRLDPY
+
+# Load the environment file
+$envFile = ".\.env"
+$envVars = Get-Content $envFile | Foreach-Object { $_ -replace "'", "" }
+
+# Set the environment variables
+foreach ($envVar in $envVars) {
+    $key, $value = $envVar -split "="
+    $env:key = $value
+}
+
+# Run Terraform commands
+terraform init
+terraform apply
+
+
+op run --env-file="./env.ps1" -- terraform init
+
+op run --env-file="./var.env" -- terraform init
+
+op vault user list vznh73vmml3xake4byghvbydda --format json | jq -r '.[].id'
+
+foreach ($line in $lines) {
+    op group list --user $line --format=json
+}
+
+cat list.txt | while read line; do
+    echo $line
+done
+op vault user revoke --user wendy.appleseed@agilebits.com --vault Prod --permissions allow_viewing
+
+Get-Content list.txt | ForEach-Object {
+    op vault user revoke --user $_ --vault vznh73vmml3xake4byghvbydda --permissions import_items
+}
+
+doctl auth init -t "dop_v1_0f3402f6e834fa8ca6f6e138d5591e7782367886f292041d359b5dc9c36c61fc"
+
+op user provision --name "provisioned from CLI" --email "nhat.nguyen+provisioned-suspended-user-test@agilebits.com"
+op user confirm "PGGXDIFNQBHKXG7EYEXZS7N6NU"
+
+$inputFile = "./test2.txt"
+$outputFile = "./test3.txt"
+
+$lines = Get-Content $inputFile
+
+$outputLines = @()
+
+foreach ($line in $lines) {
+    # Split the line into first name and last name
+    $email = $line -split ", "
+    echo $email[1]
+}
+
+# Write the output lines to the new file
+$outputLines | Out-File -FilePath $outputFile
+
+op item edit zy362ecgocf7et4n422r27mkzm 'section2.customfieldnam[text]=1-234-567-8910'
+
+
+
+$inputFile = "./inputfile.txt"
+
+$lines = Get-Content $inputFile
+
+foreach ($line in $lines) {
+    $item = $line -split ","
+    $text = $item[1]
+    op item edit $item customfieldname[text]=$text
+}
+
+op://test2/terraform/accessd
+op:
+
+cat test.json |
+jq '.id, .title, (.fields[] |
+select(.label=="Welcome to Smartway2 The complete solution for booking meeting rooms and desk space from wherever you are") .value)'
+
+$uninstallCommand = [System.Environment]::ExpandEnvironmentVariables("%LocalAppData%\1Password\app\7\1Password.exe")
+$uninstallArgs = "uninstall"
+Start-Process -FilePath $uninstallCommand -ArgumentList $uninstallArgs -Wait -NoNewWindow
+
+token = "eyJhbGciOiJFUzI1NiIsImtpZCI6IjMzbm55aWpweHhpeXNwcWVkN2ZiZGN6eHZpIiwidHlwIjoiSldUIn0.eyIxcGFzc3dvcmQuY29tL2F1dWlkIjoiRFpOUldGSkVSUkRPTEJLNVlaQUtCVlRJTFUiLCIxcGFzc3dvcmQuY29tL2Z0cyI6WyJzaWduaW5hdHRlbXB0cyIsIml0ZW11c2FnZXMiLCJhdWRpdGV2ZW50cyJdLCJhdWQiOlsiZXZlbnRzLmI1dGVzdC5jb20iXSwic3ViIjoiRVpNQ1VDWEhUVkFERkFJQjU2WktVR0lLUVEiLCJpYXQiOjE2ODAyOTI2NzAsImlzcyI6ImNvbS4xcGFzc3dvcmQuYjUiLCJqdGkiOiJ0azN6M3dqZXNlMnViMzJlenR4emFoYmpreSJ9.-7pyelnulUi53bKuf4-mIa4_O_l7YoMC9AaXOqu_2tqHm11A2NGlLyYLHXvyF_uiNth-cThYaIOdT-DTwADBIw"
+$headers = @{
+    "Authorization" = "Bearer $token"
+}
+$response = Invoke-RestMethod -Uri "https://events.b5test.com/api/v2/auth/introspect" -Method Get -Headers $headers
+
+curl --request GET \
+  --url https://events.b5test.com/api/v2/auth/introspect \
+  --header 'Authorization: Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6IjMzbm55aWpweHhpeXNwcWVkN2ZiZGN6eHZpIiwidHlwIjoiSldUIn0.eyIxcGFzc3dvcmQuY29tL2F1dWlkIjoiRFpOUldGSkVSUkRPTEJLNVlaQUtCVlRJTFUiLCIxcGFzc3dvcmQuY29tL2Z0cyI6WyJzaWduaW5hdHRlbXB0cyIsIml0ZW11c2FnZXMiLCJhdWRpdGV2ZW50cyJdLCJhdWQiOlsiZXZlbnRzLmI1dGVzdC5jb20iXSwic3ViIjoiRVpNQ1VDWEhUVkFERkFJQjU2WktVR0lLUVEiLCJpYXQiOjE2ODAyOTI2NzAsImlzcyI6ImNvbS4xcGFzc3dvcmQuYjUiLCJqdGkiOiJ0azN6M3dqZXNlMnViMzJlenR4emFoYmpreSJ9.-7pyelnulUi53bKuf4-mIa4_O_l7YoMC9AaXOqu_2tqHm11A2NGlLyYLHXvyF_uiNth-cThYaIOdT-DTwADBIw'
+
+  curl -X "POST" "https://events.b5test.com/api/v1/itemusages" \
+     -H 'Authorization: Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6IjMzbm55aWpweHhpeXNwcWVkN2ZiZGN6eHZpIiwidHlwIjoiSldUIn0.eyIxcGFzc3dvcmQuY29tL2F1dWlkIjoiRFpOUldGSkVSUkRPTEJLNVlaQUtCVlRJTFUiLCIxcGFzc3dvcmQuY29tL2Z0cyI6WyJzaWduaW5hdHRlbXB0cyIsIml0ZW11c2FnZXMiLCJhdWRpdGV2ZW50cyJdLCJhdWQiOlsiZXZlbnRzLmI1dGVzdC5jb20iXSwic3ViIjoiRVpNQ1VDWEhUVkFERkFJQjU2WktVR0lLUVEiLCJpYXQiOjE2ODAyOTI2NzAsImlzcyI6ImNvbS4xcGFzc3dvcmQuYjUiLCJqdGkiOiJ0azN6M3dqZXNlMnViMzJlenR4emFoYmpreSJ9.-7pyelnulUi53bKuf4-mIa4_O_l7YoMC9AaXOqu_2tqHm11A2NGlLyYLHXvyF_uiNth-cThYaIOdT-DTwADBIw' \
+     -H 'Content-type: application/json' \
+     -d $'{ "limit": 10, "start_time": "2023-06-27T16:32:50-03:00"}'
+
+docker tag secret-checker nhatdocker/secret-checker:latest
+docker push nhatdocker/secret-checker
+kubectl set image deployment/secret-checker
+kubectl scale deployment secret-checker --replicas=0
+kubectl rollout restart deployment secret-checker
+
+reference link
+op://testing_2/bs test item/username
+
+kubectl config set-context docker-desktop --namespace=k8-injection
+
+kubectl scale deployment 1password-injection --replicas=0 && sleep 3 && kubectl scale deploy/op-scim-bridge --replicas=1
+
+op item create `
+    --category password `
+    --title "password1" `
+    --url 'https://www.netflix.com/login' `
+    --generate-password='letters,digits,symbols,32' 
+
+op read --no-masking "op://testing_2/password1/password"
+
+$uri = "https://events.1password.com/api/v1/itemusages"
+$headers = @{
+    "Authorization" = "Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6IjMzbm55aWpweHhpeXNwcWVkN2ZiZGN6eHZpIiwidHlwIjoiSldUIn0.eyIxcGFzc3dvcmQuY29tL2F1dWlkIjoiRFpOUldGSkVSUkRPTEJLNVlaQUtCVlRJTFUiLCIxcGFzc3dvcmQuY29tL2Z0cyI6WyJzaWduaW5hdHRlbXB0cyIsIml0ZW11c2FnZXMiLCJhdWRpdGV2ZW50cyJdLCJhdWQiOlsiZXZlbnRzLmI1dGVzdC5jb20iXSwic3ViIjoiRVpNQ1VDWEhUVkFERkFJQjU2WktVR0lLUVEiLCJpYXQiOjE2ODAyOTI2NzAsImlzcyI6ImNvbS4xcGFzc3dvcmQuYjUiLCJqdGkiOiJ0azN6M3dqZXNlMnViMzJlenR4emFoYmpreSJ9.-7pyelnulUi53bKuf4-mIa4_O_l7YoMC9AaXOqu_2tqHm11A2NGlLyYLHXvyF_uiNth-cThYaIOdT-DTwADBIw"
+    "Content-type" = "application/json"
+}
+$body = @{
+    "limit" = 300
+    "start_time" = "2023-07-13T15:30:00-00:00"
+    "end_time" = "2023-07-13T15:30:30-00:00"
+} | ConvertTo-Json
+
+$response = Invoke-RestMethod -Uri $uri -Method Post -Headers $headers -Body $body
+
+tr -d '\r' < list.txt | while IFS= read -r line; do
+    vault_name=$(op vault get "$line" --format json | jq -r '.name')
+    echo "vault: $vault_name"
+    echo "groups that have share permissions:"
+    op vault group list "$line" --format json | jq -r '.[] | select(.permissions | contains(["copy_and_share_items"])) | .name'
+done
+
+export TEST="some string"
+echo $TEST
+
+op run --env-file .env --no-masking -- printenv TEST
+
+Powershell
+$env:TEST = "some random string"
+Write-Host $env:TEST
+
+$env:TEST = "op://testing_2/bs test item/username"
+Write-Host $env:TEST
+
+op run --env-file .env --no-masking -- powershell -Command "Get-ChildItem Env:TEST"
+vznh73vmml3xake4byghvbydda
+
+l5nujve4zf6ax5f4yhoqllgira
+
+op item edit l5nujve4zf6ax5f4yhoqllgira --urls website2=google2.com --urls website3=google1.com --urls wesbite4=google3.com
+
+curl -X "GET" "http://0.0.0.0:8080/v1/vaults" \
+     -H 'Authorization: Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6InU3cTRjYmxvZGtoN3I1aXU0d3EzYm9lNG5xIiwidHlwIjoiSldUIn0.eyIxcGFzc3dvcmQuY29tL2F1dWlkIjoiRFpOUldGSkVSUkRPTEJLNVlaQUtCVlRJTFUiLCIxcGFzc3dvcmQuY29tL3Rva2VuIjoiUTJKaXFmbUd2bXVPel9LbTVVN2lDZXQ2Z2lOVjZLd0MiLCIxcGFzc3dvcmQuY29tL2Z0cyI6WyJ2YXVsdGFjY2VzcyJdLCIxcGFzc3dvcmQuY29tL3Z0cyI6W3sidSI6ImRvdW02cHlrbDc0bW9zdnRyN2N3bGNxN3dxIiwiYSI6NDk2fSx7InUiOiJ2em5oNzN2bW1sM3hha2U0YnlnaHZieWRkYSIsImEiOjQ5Nn1dLCJhdWQiOlsiY29tLjFwYXNzd29yZC5jb25uZWN0Il0sInN1YiI6Ik01U0dSWDZEQVZDUzNPTkpUVzRGR0ZTWFNNIiwiaWF0IjoxNjkyNjQ3MDA2LCJpc3MiOiJjb20uMXBhc3N3b3JkLmI1IiwianRpIjoiMzdzbnhreTIzZXJpbGxtamVqbTJwZnR6a2EifQ.ppx3ZTczreHlu8RuiD9f5eAeGBgB5qinXo3s9SS0nH4mfhANALwRyqnvI3yT9n8NO6EBVNQLhdoUN4R46PYFVQ' \
+     -H 'Content-type: application/json' \
+     -d $'{}'
+
+$headers = @{
+    'Authorization' = 'Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6InU3cTRjYmxvZGtoN3I1aXU0d3EzYm9lNG5xIiwidHlwIjoiSldUIn0.eyIxcGFzc3dvcmQuY29tL2F1dWlkIjoiRFpOUldGSkVSUkRPTEJLNVlaQUtCVlRJTFUiLCIxcGFzc3dvcmQuY29tL3Rva2VuIjoiUTJKaXFmbUd2bXVPel9LbTVVN2lDZXQ2Z2lOVjZLd0MiLCIxcGFzc3dvcmQuY29tL2Z0cyI6WyJ2YXVsdGFjY2VzcyJdLCIxcGFzc3dvcmQuY29tL3Z0cyI6W3sidSI6ImRvdW02cHlrbDc0bW9zdnRyN2N3bGNxN3dxIiwiYSI6NDk2fSx7InUiOiJ2em5oNzN2bW1sM3hha2U0YnlnaHZieWRkYSIsImEiOjQ5Nn1dLCJhdWQiOlsiY29tLjFwYXNzd29yZC5jb25uZWN0Il0sInN1YiI6Ik01U0dSWDZEQVZDUzNPTkpUVzRGR0ZTWFNNIiwiaWF0IjoxNjkyNjQ3MDA2LCJpc3MiOiJjb20uMXBhc3N3b3JkLmI1IiwianRpIjoiMzdzbnhreTIzZXJpbGxtamVqbTJwZnR6a2EifQ.ppx3ZTczreHlu8RuiD9f5eAeGBgB5qinXo3s9SS0nH4mfhANALwRyqnvI3yT9n8NO6EBVNQLhdoUN4R46PYFVQ'
+    'Content-type' = 'application/json'
+}
+$response = Invoke-RestMethod -Uri 'http://localhost:8080/v1/vaults' -Method Get -Headers $headers -Body '{}'
+
+curl -X PATCH "http://localhost:8080/v1/vaults/vznh73vmml3xake4byghvbydda/items/zy362ecgocf7et4n422r27mkzm" \
+     -H "Authorization: Bearer $TOKEN" \
+     -H "Content-type: application/json"
+     -d $'[
+    { "op": "replace", "value": "bs item test", "path": "/title"},
+    { "op": "replace", "value": "new note 1", "path": "/fields/notesPlain/value"},
+    { "op": "replace", "value": "new password", "path": "/fields/password/value"}
+]'
+
+     zy362ecgocf7et4n422r27mkzm    bstestitem
+
+     curl -X PATCH "http://localhost:8080/v1/vaults/vznh73vmml3xake4byghvbydda/items/zy362ecgocf7et4n422r27mkzm" \
+     -H "Authorization: Bearer $TOKEN" \
+     -H "Content-type: application/json" \
+     -d $'[
+    { "op": "replace", "value": "bs item test", "path": "/title"},
+    { "op": "replace", "value": "new note 1", "path": "/fields/notesPlain/value"},
+    { "op": "replace", "value": "new password", "path": "/fields/password/value"}
+]'
+
+(cat test.json | ConvertFrom-Json).user_uuid
+(op whoami | ConvertFrom-Json).user_uuid
+
+(op vault ls --format json | ConvertFrom-Json -AsHashtable).vaule
+
+foreach ($vault in $list) {
+    echo "this is vault $vault"
+}\
+
+op vault user revoke --user M7QUN5QFS5GA5AJY6JOUJ7YMXU --vault vznh73vmml3xake4byghvbydda
+
+'[
+    { "op": "replace", "value": "bs item test", "path": "/title"},
+    { "op": "replace", "value": "new note 1", "path": "/fields/notesPlain/value"},
+    { "op": "replace", "value": "new password", "path": "/fields/password/value"}
+]'
+
+op item create --category login --title add-files --vault vznh73vmml3xake4byghvbydda file1[file]=./test.txt file2[file]=./token.txt 
+
+op item share zy362ecgocf7et4n422r27mkzm --emails bs-member2@test.com --vault vznh73vmml3xake4byghvbydda
+op item share vdksivlahy2nsvdqp3vxv2a66y --emails bs-member2@test.com --vault test2
+
+$list=$(op item ls --vault doum6pykl74mosvtr7cwlcq7wq --format json | ConvertFrom-Json)
+
+# Specify the path to your JSON file
+$jsonFilePath = "test.json"
+
+# Read the JSON data from the file
+$jsonData = Get-Content -Path $jsonFilePath | ConvertFrom-Json
+
+# Define the target created_at date
+$targetCreatedAt = 11/09/2023 17:56:21
+
+# Filter the JSON data to find the item with the specified created_at date
+$targetItem = $jsonData | Where-Object { $_.created_at -eq $targetCreatedAt }
+
+# Check if the target item was found
+if ($targetItem -ne $null) {
+    $targetItemId = $targetItem.id
+    Write-Host "Item with created_at '$targetCreatedAt' found. id: $targetItemId"
+} else {
+    Write-Host "Item with created_at '$targetCreatedAt' not found."
+}
+
+find /mnt/c/Users/kimnh/OneDrive/Desktop/Integrations/ansible/mytest/thirdTest -type d -perm -o=w
+chmod 755 /mnt/c/Users/kimnh/OneDrive/Desktop/Integrations/ansible/mytest/thirdTest
+
+server01 and 02: inet 127.0.0.1  netmask 255.0.0.0
+docker exec -it ansible /bin/bash
+
+(op whoami --format json | ConvertFrom-Json).user_uuid 
+
+# Import the data from the file
+
+$headers = 'id', 'name', 'content_version'
+$data = Import-Csv -Path './list.csv' -Delimiter "`t" -Header $headers
+$uniqueData = $data | Sort-Object -Property name -Unique
+$uniqueData | Export-Csv -Path 'list2.csv' -Delimiter "`t" -NoTypeInformation
+
+$data=$(op vault ls --format json | convertFrom-Json).name
+
+$data = op vault ls --format json | ConvertFrom-Json
+foreach ($item in $data) {
+    $name = $item.name
+    $id = $item.id
+    Write-Output "Name: $name, ID: $id"
+}
+
+
+$data = op vault ls --format json | ConvertFrom-Json
+
+# Create an array to hold the new objects
+$newData = @()
+
+foreach ($item in $data) {
+    # Create a new object with 'name' and 'id' properties
+    $newItem = New-Object PSObject -Property @{
+        'name' = $item.name
+        'id' = $item.id
+    }
+
+    # Add the new object to the array
+    $newData += $newItem
+}
+
+
+
+# Import the data from the CSV file
+$data = Import-Csv -Path './output.csv'
+
+# Remove duplicates based on the 'name' column
+$uniqueData = $data | Sort-Object -Property name -Unique
+
+# Export the data back to the CSV file
+$uniqueData | Export-Csv -Path 'list.csv' -NoTypeInformation
+
+# Import the data from the CSV file
+$data = Import-Csv -Path './output.csv'
+
+# Group the data by the 'name' column and filter groups that have more than one item
+$duplicates = $data | Group-Object -Property name | Where-Object { $_.Count -gt 1 }
+
+# Extract the 'name' property of each group
+$duplicateNames = $duplicates | ForEach-Object { $_.Name }
+
+# Output the duplicate names
+$duplicateNames
+
+
+# Import the data from the CSV file
+$data = Import-Csv -Path './output.csv'
+
+# Group the data by the 'name' column and filter groups that have more than one item
+$duplicates = $data | Group-Object -Property name | Where-Object { $_.Count -gt 1 }
+
+# Create an array to hold the new objects
+$duplicateData = @()
+
+foreach ($group in $duplicates) {
+    foreach ($item in $group.Group) {
+        # Create a new object with 'name' and 'id' properties
+        $newItem = New-Object PSObject -Property @{
+            'name' = $item.name
+            'id' = $item.id
+        }
+
+        # Add the new object to the array
+        $duplicateData += $newItem
+    }
+}
+
+# Export the array to a CSV file
+$duplicateData | Export-Csv -Path 'duplicates.csv' -NoTypeInformation
+
+
+# Import the data from the CSV file
+$data = Import-Csv -Path './duplicates.csv'
+
+# Create a hashtable to keep track of duplicates
+$duplicates = @{}
+
+# Create an array to hold the new data
+$newData = @()
+
+foreach ($item in $data) {
+    if ($item.name -in $duplicates.Keys) {
+        # If this is a duplicate and we haven't removed a duplicate of this name yet
+        if ($duplicates[$item.name] -eq $false) {
+            # Don't add this item to the new data and mark this name as having a duplicate removed
+            $duplicates[$item.name] = $true
+        } else {
+            # If we've already removed a duplicate of this name, add this item to the new data
+            $newData += $item
+        }
+    } else {
+        # If this is not a duplicate, add it to the new data and add its name to the hashtable
+        $newData += $item
+        $duplicates[$item.name] = $false
+    }
+}
+
+# Export the new data back to the CSV file
+$data = Import-Csv -Path './your_file.csv'
+
+# Remove every vault on the file
+foreach ($vault in $data) {
+    echo "1password will now delete vault $vault.name"
+    op vault delete $vault.id
+}
+
+# Get the content of the file
+$content = Get-Content -Path './your_file.csv' -Raw
+
+# Remove all double quotes
+$content = $content -replace '"', ''
+
+# Write the content back to the file
+Set-Content -Path './your_file.csv' -Value $content
+
+
+jq 'group_by(.name) | map(select(length > 1)) | .[] | .[] | {name: .name, id: .id} | @csv' test.json > output.csv
+
+cat test.json | jq -s 'group_by(.name) | map(select(length > 1)) | .[] | .[] | [.name, .id] | @csv' > output.csv
+
+
+$content = Get-Content -Path 'output.csv' -Raw
+
+# Remove all double quotes
+$content = $content -replace '"', ''
+
+# Write the content back to the file
+Set-Content -Path 'your_file.csv' -Value $content
+
+jq 'group_by(.name) | map(select(length > 1)) | .[] | .[] | [.name, .id] | @csv' test.json > output.csv  
+
+jq 'group_by(.name) | map(select(length > 1)) | .[] | .[] | [.name, .id] | @csv' | Get-Content -replace '\\', '' -replace '"', '' test.json > output.csv
+
+op vault ls --format json | jq 'group_by(.name) | map(select(length > 1)) | .[] | .[] | [.name, .id] | @csv' test.json | sed 's/\\//g' | sed 's/"//g' > output.csv
+
+jq 'group_by(.name) | 
+    map(select(length > 1)) | 
+    .[] | 
+    .[] | 
+    [.name, .id] | 
+    @csv' test.json | 
+sed 's/\\//g' | 
+sed 's/"//g' > output.csv
+
+
+op vault ls --format json | 
+jq 'group_by(.name) | 
+    map(select(length > 1)) | 
+    .[] | 
+    .[] | 
+    [.name, .id] | 
+    @csv' | 
+sed 's/\\//g' | 
+sed 's/"//g' |
+awk -F, '!seen[$1]++' > list.csv
+
+
+cat list.csv | while IFS=',' read -r name id
+do
+  op vault delete $id
+done
+
+curl -X GET http://20.253.81.114:8080/v1/vaults \
+  --header 'Authorization: Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6InU3cTRjYmxvZGtoN3I1aXU0d3EzYm9lNG5xIiwidHlwIjoiSldUIn0.eyIxcGFzc3dvcmQuY29tL2F1dWlkIjoiRFpOUldGSkVSUkRPTEJLNVlaQUtCVlRJTFUiLCIxcGFzc3dvcmQuY29tL3Rva2VuIjoiUTJKaXFmbUd2bXVPel9LbTVVN2lDZXQ2Z2lOVjZLd0MiLCIxcGFzc3dvcmQuY29tL2Z0cyI6WyJ2YXVsdGFjY2VzcyJdLCIxcGFzc3dvcmQuY29tL3Z0cyI6W3sidSI6ImRvdW02cHlrbDc0bW9zdnRyN2N3bGNxN3dxIiwiYSI6NDk2fSx7InUiOiJ2em5oNzN2bW1sM3hha2U0YnlnaHZieWRkYSIsImEiOjQ5Nn1dLCJhdWQiOlsiY29tLjFwYXNzd29yZC5jb25uZWN0Il0sInN1YiI6Ik01U0dSWDZEQVZDUzNPTkpUVzRGR0ZTWFNNIiwiaWF0IjoxNjkyNjQ3MDA2LCJpc3MiOiJjb20uMXBhc3N3b3JkLmI1IiwianRpIjoiMzdzbnhreTIzZXJpbGxtamVqbTJwZnR6a2EifQ.ppx3ZTczreHlu8RuiD9f5eAeGBgB5qinXo3s9SS0nH4mfhANALwRyqnvI3yT9n8NO6EBVNQLhdoUN4R46PYFVQ' \
+  --header 'Content-type: application/json'
+
+docker exec -it --user Integrations ubuntu curl -X GET http://localhost:8080/v1/vaults \
+  --header 'Authorization: Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6InU3cTRjYmxvZGtoN3I1aXU0d3EzYm9lNG5xIiwidHlwIjoiSldUIn0.eyIxcGFzc3dvcmQuY29tL2F1dWlkIjoiRFpOUldGSkVSUkRPTEJLNVlaQUtCVlRJTFUiLCIxcGFzc3dvcmQuY29tL3Rva2VuIjoiUTJKaXFmbUd2bXVPel9LbTVVN2lDZXQ2Z2lOVjZLd0MiLCIxcGFzc3dvcmQuY29tL2Z0cyI6WyJ2YXVsdGFjY2VzcyJdLCIxcGFzc3dvcmQuY29tL3Z0cyI6W3sidSI6ImRvdW02cHlrbDc0bW9zdnRyN2N3bGNxN3dxIiwiYSI6NDk2fSx7InUiOiJ2em5oNzN2bW1sM3hha2U0YnlnaHZieWRkYSIsImEiOjQ5Nn1dLCJhdWQiOlsiY29tLjFwYXNzd29yZC5jb25uZWN0Il0sInN1YiI6Ik01U0dSWDZEQVZDUzNPTkpUVzRGR0ZTWFNNIiwiaWF0IjoxNjkyNjQ3MDA2LCJpc3MiOiJjb20uMXBhc3N3b3JkLmI1IiwianRpIjoiMzdzbnhreTIzZXJpbGxtamVqbTJwZnR6a2EifQ.ppx3ZTczreHlu8RuiD9f5eAeGBgB5qinXo3s9SS0nH4mfhANALwRyqnvI3yT9n8NO6EBVNQLhdoUN4R46PYFVQ' \
+  --header 'Content-type: application/json'
+
+curl -X GET http://10.0.145.159:8080/v1/vaults \
+  --header 'Authorization: Bearer <token>' \
+  --header 'Content-type: application/json'
+
+op run --env-file="test.env" -- printenv USERNAME
+op run --env-file="test.env" -- powershell -c '$Env:USERNAME'
+
+op read --env-file="test.env"
+
+env=$(cat ./test.env) | op read $env
+        
+        vznh73vmml3xake4byghvbydda
+
+op item ls --vault vznh73vmml3xake4byghvbydda --format json | \
+op item get - --format json | \
+jq -r '.fields[] | select(.id=="username" or .id=="password") | {id: .id, value: .value}'
+
+op item ls --vault vznh73vmml3xake4byghvbydda --format json | `
+op item get - --format json | `
+jq -r '.fields[] | select(.id=="username" or .id=="password") | {id: .id, value: .value}'
+
+jq -r '{title: .title, name: .vault.name, password: (.fields[] | select(.id=="password") | .value)}' test.json
+
+
+
+$list=$(op user list --format json | op user get - --format json | jq '{id, email, last_auth_at}')
+echo $list | jq -s '.' > list.json
+jq -r '.[] | select(.last_auth_at < "'$(date -d '1 month ago' -u +'%Y-%m-%dT%H:%M:%SZ')'") | .email' list.json
+
+op user list --format json | op user get - --format json | jq -r 'select(.last_auth_at | fromdateiso8601 < (now - 2629743)) | .email'
+
+op item share y5zr7zavnbjdrdv7jq6hbkehcq --emails bs-member2@test.com --vault vznh73vmml3xake4byghvbydda
+
+helm upgrade 1p-connect . --set-file connect.credentials=1password-credentials.json
+
+$uri = "http://10.0.145.159:8080/v1/vaults"
+$headers = @{
+    'Authorization' = 'Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6InU3cTRjYmxvZGtoN3I1aXU0d3EzYm9lNG5xIiwidHlwIjoiSldUIn0.eyIxcGFzc3dvcmQuY29tL2F1dWlkIjoiRFpOUldGSkVSUkRPTEJLNVlaQUtCVlRJTFUiLCIxcGFzc3dvcmQuY29tL3Rva2VuIjoiUTJKaXFmbUd2bXVPel9LbTVVN2lDZXQ2Z2lOVjZLd0MiLCIxcGFzc3dvcmQuY29tL2Z0cyI6WyJ2YXVsdGFjY2VzcyJdLCIxcGFzc3dvcmQuY29tL3Z0cyI6W3sidSI6ImRvdW02cHlrbDc0bW9zdnRyN2N3bGNxN3dxIiwiYSI6NDk2fSx7InUiOiJ2em5oNzN2bW1sM3hha2U0YnlnaHZieWRkYSIsImEiOjQ5Nn1dLCJhdWQiOlsiY29tLjFwYXNzd29yZC5jb25uZWN0Il0sInN1YiI6Ik01U0dSWDZEQVZDUzNPTkpUVzRGR0ZTWFNNIiwiaWF0IjoxNjkyNjQ3MDA2LCJpc3MiOiJjb20uMXBhc3N3b3JkLmI1IiwianRpIjoiMzdzbnhreTIzZXJpbGxtamVqbTJwZnR6a2EifQ.ppx3ZTczreHlu8RuiD9f5eAeGBgB5qinXo3s9SS0nH4mfhANALwRyqnvI3yT9n8NO6EBVNQLhdoUN4R46PYFVQ'
+    'Content-type' = 'application/json'
+}
+
+$response = Invoke-RestMethod -Uri $uri -Headers $headers -Method Get
+curl -X GET http://20.237.109.233:8080/v1/vaults \
+  --header 'Authorization: Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6InU3cTRjYmxvZGtoN3I1aXU0d3EzYm9lNG5xIiwidHlwIjoiSldUIn0.eyIxcGFzc3dvcmQuY29tL2F1dWlkIjoiRFpOUldGSkVSUkRPTEJLNVlaQUtCVlRJTFUiLCIxcGFzc3dvcmQuY29tL3Rva2VuIjoiUTJKaXFmbUd2bXVPel9LbTVVN2lDZXQ2Z2lOVjZLd0MiLCIxcGFzc3dvcmQuY29tL2Z0cyI6WyJ2YXVsdGFjY2VzcyJdLCIxcGFzc3dvcmQuY29tL3Z0cyI6W3sidSI6ImRvdW02cHlrbDc0bW9zdnRyN2N3bGNxN3dxIiwiYSI6NDk2fSx7InUiOiJ2em5oNzN2bW1sM3hha2U0YnlnaHZieWRkYSIsImEiOjQ5Nn1dLCJhdWQiOlsiY29tLjFwYXNzd29yZC5jb25uZWN0Il0sInN1YiI6Ik01U0dSWDZEQVZDUzNPTkpUVzRGR0ZTWFNNIiwiaWF0IjoxNjkyNjQ3MDA2LCJpc3MiOiJjb20uMXBhc3N3b3JkLmI1IiwianRpIjoiMzdzbnhreTIzZXJpbGxtamVqbTJwZnR6a2EifQ.ppx3ZTczreHlu8RuiD9f5eAeGBgB5qinXo3s9SS0nH4mfhANALwRyqnvI3yT9n8NO6EBVNQLhdoUN4R46PYFVQ' \
+  --header 'Content-type: application/json'
+
+  curl -X GET http://10.224.0.5:32098/v1/vaults \
+  --header 'Authorization: Bearer <token>' \
+  --header 'Content-type: application/json'
+
+$csv=import-csv -path ./test.csv
+foreach ($row in $csv){
+  op user provision --name=$row.name --email=$row.email
+}
+
+$csv = Import-Csv -Path ./test.csv
+foreach ($row in $csv) {
+    Write-Output $row.name
+    Write-Output $row.email
+}
+
+#### Get an item id right after creating it.
+op item create --vault=${VLT} --category "SSH Key" --title "SSH Keypair for CustDEF Test" --ssh-generate-key 'rsa4096' | tee getitm
