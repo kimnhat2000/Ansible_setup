@@ -1,0 +1,77 @@
+
+## MAIN BS ACCOUNT
+eval $(echo "04081984kimnhat" | op signin)
+
+address="my.b5test.com"
+email="nhat.nguyen@agilebits.com"
+secertKey="A3-VG7W87-DSZXDB-XX2EF-GMGQ9-QJLZQ-LDE2G"
+password="04081984kimnhat"
+
+eval $(echo "$password" | op account add --address $address --email $email --secret-key $secertKey --signin)
+eval $(echo "$password" | op signin)
+
+TOKEN=$(printf $password | op account add --address $address --email $email --secret-key $secertKey --signin --raw)
+
+$address="my.b5test.com"
+$email="nhat.nguyen@agilebits.com"
+$secertKey="A3-VG7W87-DSZXDB-XX2EF-GMGQ9-QJLZQ-LDE2G"
+$password="04081984kimnhat"
+
+    Invoke-Expression $(echo "$password" | op account add --address $address --email $email --secret-key $secertKey --signin --shorthand mainmember)
+
+kimnhat2000@gmail.com
+nmd!rzb.ZQZ!vpd2mgf
+
+https://1passwordssotest-team.b5test.com/signin?a=new
+
+##TEAM MEMBER 2 BS ACCOUNT 
+address="my.b5test.com"
+email="nhat.nguyen+businessteammember2@agilebits.com"
+secertKey="A3-MYS7BM-DVL9XQ-VF734-WYXTD-HKSDW-TG9SA"
+password="04081984kimnhat"
+
+op account add --address $address --email $email --secret-key $secertKey --signin
+eval $(echo "$password" | op signin)
+
+eval $(echo "$password" | op account add --address $address --email $email --secret-key $secertKey --shorthand=mem2 --signin)
+
+$address="my.b5test.com"
+$email="nhat.nguyen+businessteammember2@agilebits.com"
+$secertKey="A3-MYS7BM-DVL9XQ-VF734-WYXTD-HKSDW-TG9SA"
+$password="04081984kimnhat"
+
+Invoke-Expression $(echo "$password" | op account add --address $address --email $email --secret-key $secertKey --signin --shorthand mem2)
+
+export OP_SERVICE_ACCOUNT_TOKEN=ops_eyJzaWduSW5BZGRyZXNzIjoiYnMtdGVzdC1hY2NvdW50LmI1dGVzdC5jb20iLCJ1c2VyQXV0aCI6eyJtZXRob2QiOiJTUlBnLTQwOTYiLCJhbGciOiJQQkVTMmctSFMyNTYiLCJpdGVyYXRpb25zIjo2NTAwMDAsInNhbHQiOiJYVU1ZSzRfTlBsdGVFM29LWEJySkJ3In0sImVtYWlsIjoiYzdldHNzc3Q3cmp0eUAxcGFzc3dvcmRzZXJ2aWNlYWNjb3VudHMuY29tIiwic3JwWCI6IjI0YjEwZTExNDMzNzc5ZjY5MmFmMzdlZmIwM2Y0MTY3ZDI1NjNlMWY4NmY2NDc4NjU4NzQ3YTE2ZjQyYWM4ZDciLCJtdWsiOnsiYWxnIjoiQTI1NkdDTSIsImV4dCI6dHJ1ZSwiayI6IlZCWWRLc2hrU1YyX0s1VnJhOWM2dkI2b1RFMHFaWnBVNXRUTFRxSmVuaFkiLCJrZXlfb3BzIjpbImVuY3J5cHQiLCJkZWNyeXB0Il0sImt0eSI6Im9jdCIsImtpZCI6Im1wIn0sInNlY3JldEtleSI6IkEzLVNIUURaNy1MN1Q3QlotM1o5N1ktVlg2QVMtTkpaSFQtWDM4QkQiLCJ0aHJvdHRsZVNlY3JldCI6eyJzZWVkIjoiZmFiZjQwYWU1YTFhN2YwMDUwYmUyNjY5NzY1MjA5MDAwOTQ4Nzc4ODY3MGU3YTZmYWExM2NmZTM4MjNkYmIxYyIsInV1aWQiOiJURkJLQU5UQTRWRElERkQ2UzNRQUVUM1hXTSJ9LCJkZXZpY2VVdWlkIjoicnpzdmVsNHVpNDRtc2xmeGp1NWdiaHV5ankifQ
+# 1password.com service account
+export OP_SERVICE_ACCOUNT_TOKEN=ops_eyJzaWduSW5BZGRyZXNzIjoidGVzdC1hY2NvdW50LTFwdy4xcGFzc3dvcmQuY29tIiwidXNlckF1dGgiOnsibWV0aG9kIjoiU1JQZy00MDk2IiwiYWxnIjoiUEJFUzJnLUhTMjU2IiwiaXRlcmF0aW9ucyI6NjUwMDAwLCJzYWx0IjoiVk4tTVc1RjB4YjRnb2pYUzJvd2pJZyJ9LCJlbWFpbCI6ImN1M3g1YTRpaXRtZWFAMXBhc3N3b3Jkc2VydmljZWFjY291bnRzLmNvbSIsInNycFgiOiJhMThlOWQyNDI1ZTI2YjAwMzNmODk5NWFjY2U2NzRhZjc0MGE3MDQ4NGFkZmY5YzRjYTljNTVmMTg1MGY3MmYzIiwibXVrIjp7ImFsZyI6IkEyNTZHQ00iLCJleHQiOnRydWUsImsiOiJRTEg0X1E3RlVFQ1UzM2RtenI5ZVFDQWNfdkZOYnc5VlF6TUE0M0I2eHBJIiwia2V5X29wcyI6WyJlbmNyeXB0IiwiZGVjcnlwdCJdLCJrdHkiOiJvY3QiLCJraWQiOiJtcCJ9LCJzZWNyZXRLZXkiOiJBMy1OQ0I5QjMtVFdNTVJYLVpLV1JDLU02VEhXLUsyQVpTLTJFQ1pGIiwidGhyb3R0bGVTZWNyZXQiOnsic2VlZCI6ImNkYzFhNWRjNzAwMzNiMWJhODBlOTQ5NjYzYWJlZjkxYTE4YTRhNjhhZjNhZjRmZjliZTRjZTJjOTFjOWMxMGMiLCJ1dWlkIjoiTTI1M0oyQjRIRkMyRkFSNDNHWUJFTVEySjQifSwiZGV2aWNlVXVpZCI6Im9icGMyeHYzMm5zd3QyZmFkNnJpeTRrZ3plIn0
+
+$Env:OP_SERVICE_ACCOUNT_TOKEN = "ops_eyJzaWduSW5BZGRyZXNzIjoiYnMtdGVzdC1hY2NvdW50LmI1dGVzdC5jb20iLCJ1c2VyQXV0aCI6eyJtZXRob2QiOiJTUlBnLTQwOTYiLCJhbGciOiJQQkVTMmctSFMyNTYiLCJpdGVyYXRpb25zIjo2NTAwMDAsInNhbHQiOiJYVU1ZSzRfTlBsdGVFM29LWEJySkJ3In0sImVtYWlsIjoiYzdldHNzc3Q3cmp0eUAxcGFzc3dvcmRzZXJ2aWNlYWNjb3VudHMuY29tIiwic3JwWCI6IjI0YjEwZTExNDMzNzc5ZjY5MmFmMzdlZmIwM2Y0MTY3ZDI1NjNlMWY4NmY2NDc4NjU4NzQ3YTE2ZjQyYWM4ZDciLCJtdWsiOnsiYWxnIjoiQTI1NkdDTSIsImV4dCI6dHJ1ZSwiayI6IlZCWWRLc2hrU1YyX0s1VnJhOWM2dkI2b1RFMHFaWnBVNXRUTFRxSmVuaFkiLCJrZXlfb3BzIjpbImVuY3J5cHQiLCJkZWNyeXB0Il0sImt0eSI6Im9jdCIsImtpZCI6Im1wIn0sInNlY3JldEtleSI6IkEzLVNIUURaNy1MN1Q3QlotM1o5N1ktVlg2QVMtTkpaSFQtWDM4QkQiLCJ0aHJvdHRsZVNlY3JldCI6eyJzZWVkIjoiZmFiZjQwYWU1YTFhN2YwMDUwYmUyNjY5NzY1MjA5MDAwOTQ4Nzc4ODY3MGU3YTZmYWExM2NmZTM4MjNkYmIxYyIsInV1aWQiOiJURkJLQU5UQTRWRElERkQ2UzNRQUVUM1hXTSJ9LCJkZXZpY2VVdWlkIjoicnpzdmVsNHVpNDRtc2xmeGp1NWdiaHV5ankifQ"
+op user get --me
+Remove-Item Env:OP_SERVICE_ACCOUNT_TOKEN
+
+## INDIVIDUAL ACCOUNT
+address="my.b5test.com"
+email="nhat.nguyen@agilebits.com"
+secertKey="A3-DWRXYF-HC2KS9-5WJF4-QVJ2M-22JH9-3L3DN"
+password="04081984kimnhat"
+
+eval $(echo "$password" | op account add --address $address --email $email --secret-key $secertKey --signin --shorthand indi)
+eval $(echo "$password" | op signin --account indi)
+
+$address="my.b5test.com"
+$email="nhat.nguyen@agilebits.com"
+$secertKey="A3-DWRXYF-HC2KS9-5WJF4-QVJ2M-22JH9-3L3DN"
+$password="04081984kimnhat"
+
+Invoke-Expression $(echo "$password" | op account add --address $address --email $email --secret-key $secertKey --signin --shorthand mainmember)
+
+export OP_CONNECT_HOST="http://localhost:8080"
+export OP_CONNECT_TOKEN="eyJhbGciOiJFUzI1NiIsImtpZCI6InU3cTRjYmxvZGtoN3I1aXU0d3EzYm9lNG5xIiwidHlwIjoiSldUIn0.eyIxcGFzc3dvcmQuY29tL2F1dWlkIjoiRFpOUldGSkVSUkRPTEJLNVlaQUtCVlRJTFUiLCIxcGFzc3dvcmQuY29tL3Rva2VuIjoiUTJKaXFmbUd2bXVPel9LbTVVN2lDZXQ2Z2lOVjZLd0MiLCIxcGFzc3dvcmQuY29tL2Z0cyI6WyJ2YXVsdGFjY2VzcyJdLCIxcGFzc3dvcmQuY29tL3Z0cyI6W3sidSI6ImRvdW02cHlrbDc0bW9zdnRyN2N3bGNxN3dxIiwiYSI6NDk2fSx7InUiOiJ2em5oNzN2bW1sM3hha2U0YnlnaHZieWRkYSIsImEiOjQ5Nn1dLCJhdWQiOlsiY29tLjFwYXNzd29yZC5jb25uZWN0Il0sInN1YiI6Ik01U0dSWDZEQVZDUzNPTkpUVzRGR0ZTWFNNIiwiaWF0IjoxNjkyNjQ3MDA2LCJpc3MiOiJjb20uMXBhc3N3b3JkLmI1IiwianRpIjoiMzdzbnhreTIzZXJpbGxtamVqbTJwZnR6a2EifQ.ppx3ZTczreHlu8RuiD9f5eAeGBgB5qinXo3s9SS0nH4mfhANALwRyqnvI3yT9n8NO6EBVNQLhdoUN4R46PYFVQ"
+
+"op://vznh73vmml3xake4byghvbydda/zy362ecgocf7et4n422r27mkzm/username"
+
+op item get cvzbzwwinniak5id6oe4z7krwq --vault vznh73vmml3xake4byghvbydda --format json
+
+op vault user grant --user SZDKDSPFDNGQTG7TN3AC2VG2QY --vault vznh73vmml3xake4byghvbydda --permissions view_items,view_and_copy_passwords,edit_items
+

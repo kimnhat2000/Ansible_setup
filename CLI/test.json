@@ -1,0 +1,53 @@
+{
+  "title": "new item from custom template",
+  "category": "TestCustomTemplate",
+  "sections": [
+    {
+      "id": "gj2dzr5j4da3rwl56vcjmfuidy",
+      "label": "Test section 1"
+    },
+    {
+      "id": "obfz37fv4gbl742ybgba7rai5e",
+      "label": "address test"
+    }
+  ],
+  "fields": [
+    {
+      "id": "notesPlain",
+      "type": "STRING",
+      "purpose": "NOTES",
+      "label": "notesPlain",
+      "value": ""
+    },
+    {
+      "id": "at6tlo2si4wg6vgo325m22bwem",
+      "section": {
+        "id": "gj2dzr5j4da3rwl56vcjmfuidy",
+        "label": "Test section 1"
+      },
+      "type": "STRING",
+      "label": "username",
+      "value": ""
+    },
+    {
+      "id": "m5idkpjvsrc6rvxmpuegqhjhxe",
+      "section": {
+        "id": "gj2dzr5j4da3rwl56vcjmfuidy",
+        "label": "Test section 1"
+      },
+      "type": "CONCEALED",
+      "label": "password",
+      "value": ""
+    },
+    {
+      "id": "kosfiehxsk26kwebxa4wel3lka",
+      "section": {
+        "id": "obfz37fv4gbl742ybgba7rai5e",
+        "label": "address test"
+      },
+      "type": "STRING",
+      "label": "streetname",
+      "value": ""
+    }
+  ]
+}
