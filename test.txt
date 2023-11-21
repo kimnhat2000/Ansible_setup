@@ -325,10 +325,7 @@ curl -X PATCH "http://localhost:8080/v1/vaults/vznh73vmml3xake4byghvbydda/items/
 (op whoami | ConvertFrom-Json).user_uuid
 
 (op vault ls --format json | ConvertFrom-Json -AsHashtable).vaule
-
-foreach ($vault in $list) {
-    echo "this is vault $vault"
-}\
+\
 
 op vault user revoke --user M7QUN5QFS5GA5AJY6JOUJ7YMXU --vault vznh73vmml3xake4byghvbydda
 
