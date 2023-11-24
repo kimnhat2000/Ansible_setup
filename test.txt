@@ -615,3 +615,24 @@ foreach ($row in $csv) {
 
 #### Get an item id right after creating it.
 op item create --vault=${VLT} --category "SSH Key" --title "SSH Keypair for CustDEF Test" --ssh-generate-key 'rsa4096' | tee getitm
+
+curl -X "PATCH" http://<URL>/v1/vaults/vznh73vmml3xake4byghvbydda/items/cvzbzwwinniak5id6oe4z7krwq \
+     -H 'Authorization: Bearer <token>' \
+	     -H 'Content-type: application/json' \
+     -d $'[
+      { "op": "replace", "path": "<path to field>", "value": "<new vaule>"}
+  ]'
+
+###remove duplicate
+##Get a list of duplicate items and take one.
+$duplicates=$(op item ls --vault vznh73vmml3xake4byghvbydda --format json | jq 'group_by(.title) | map(select(length>1) | .[0])')
+
+##Get the id from the list.
+$ids=echo $duplicates | jq -r '. [] | .id'
+
+##Move duplicate item to a duplicateItemVault
+op vault create duplicateItemVault
+
+$ids | foreach-object {
+    op item move $_ --current-vault vznh73vmml3xake4byghvbydda --destination-vault duplicateItemVault
+}
