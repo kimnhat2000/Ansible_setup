@@ -636,3 +636,13 @@ op vault create duplicateItemVault
 $ids | foreach-object {
     op item move $_ --current-vault vznh73vmml3xake4byghvbydda --destination-vault duplicateItemVault
 }
+
+$vaults=op vault ls --format json | jq -r '.[].id'
+
+foreach ($vault in $vaults) {
+    op vault user grant --permissions view_items --vault $vault --user M7QUN5QFS5GA5AJY6JOUJ7YMXU
+}
+
+op read "op://Private/GitHub created using 1Password /private key" | xxd
+
+new line
