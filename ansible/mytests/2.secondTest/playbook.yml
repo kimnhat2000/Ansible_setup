@@ -1,0 +1,5 @@
+- hosts: all
+  tasks:
+  - name: "Create new file devopsroles.txt"
+    shell: |
+        touch devopsroles.txt
